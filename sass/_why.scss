@@ -1,0 +1,58 @@
+.why{
+    &-wrap{
+        background:linear-gradient(to right,rgba(#000,.5),rgba(#000,.5)),url(https://bizweb.dktcdn.net/100/315/268/themes/681660/assets/bg_visao.png?1642398654546) top center /cover;
+        padding: 5rem 0 5rem;
+    }
+    &-list{
+        
+        display: flex;
+        align-items:stretch;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &:not(:last-child){
+            margin-bottom: 3rem;
+        }
+    }
+    &-item{
+        width:calc(33.333% - 2rem);
+        display: flex;
+        
+        
+        //background-color: #fff;
+        &-number{
+            color: #fff;
+            font-size:2rem;
+            background-color: $primary-color;
+            border-radius:50%;
+            width:4rem;
+            height: 4rem;
+            text-align:center;
+            line-height:4rem;
+            margin-right: 2rem;
+        }
+        &-info{
+            width:calc(100% - 6rem);
+            &-title{
+                font-size:2.5rem;
+                font-weight:500;
+                color:$primary-color;
+                padding-right: auto;
+                padding-bottom: 2rem;
+                border-bottom:1px  dashed white;
+                text-transform: uppercase;
+            }
+            &-description{
+                color: #fff;
+                padding-top: 2rem;
+                padding-right: auto;
+            }
+        }
+    }
+    @include maxWidth(767px){
+        &-item{
+            width:100%;
+            margin-bottom: 2rem;
+        }
+        padding-bottom: 0;
+   }
+}

@@ -1,0 +1,85 @@
+.modal{
+   display: none;
+    @include maxWidth(1023px){
+        &.active{
+            display: block;
+        }
+        display: none;
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background-color:rgba(#000,0.5);
+        z-index:20;
+        .modal-navbar-list{
+            display:block;
+            position:absolute;
+            top:0;
+            left:0;
+            bottom:0;
+            width:27rem;
+            background-color:#fff;
+            
+        }
+        .modal-subnav-lv2{
+            display:none;
+        }
+        .modal-subnav-list{
+            display:none;
+        }
+        .modal-navbar-item{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            color:#000;
+        &-link{
+            color:#000;
+            &:hover{
+                color: $primary-color
+            }
+        }
+        padding:1.5rem 2rem;
+        &-icon{
+            padding-left: 5rem;
+
+        }
+        &:hover > *{
+            color: #fff;
+
+            
+        }
+        }
+       
+      
+        .modal-navbar-item:hover{
+           
+            background-color:$primary-color;
+            .header-navbar-item-link{
+                color:#fff;
+            }
+        }
+        &-navbar-item{
+           border-bottom: 2px solid #ccc;
+            &-link{
+                color:#000;
+            }
+        }
+        
+        &-navbar{
+            background-color: $bg-color;
+            min-height: 4rem;
+        }
+        &-navbar-icon-menu{
+            line-height: 4rem;
+            height: 4rem;
+            width: 4rem;
+            color: #fff;
+           text-align: center;
+            &:hover{
+                background-color:$primary-color
+            }
+
+        }
+    }
+}

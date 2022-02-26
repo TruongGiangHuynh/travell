@@ -1,0 +1,87 @@
+.favourist{
+
+    &-list{
+        @include flexbox;
+        height: 70rem;
+    }
+    &-col{
+        width:23.333%;
+        &-item-wrap{
+            position: absolute;
+                top: 0;left: 0;right: 0;bottom: 0;
+                background-color:rgba(#000,.3);
+                display:flex;
+                transition: all 0.25s linear;
+                &:hover{
+                    background-color:$primary-color;
+                    .favourist-col-item-info{
+                        transform:translateY(-40%);
+                        &-h{
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }
+        }
+      
+    }
+    
+    &-col-item{
+        height:50%;
+        position: relative;
+        &-info{
+            transition: all 0.25s linear;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction:column;
+
+            &-destination{
+                margin-top: 2rem;
+                font-size:2rem;
+                font-weight: 500;
+                color: #fff;
+            }
+            &-h{
+                transition: all 0.25s linear;
+                display:flex;
+                flex-direction:column;
+
+                &-text{
+                    color: #fff;
+                    margin-top: 2rem;
+                }
+                &-btn{
+                    color: #fff;
+                    font-size:1.5rem;
+                    font-weight: 500;
+                    background-color:$primary-color;
+                    border: 2px solid #fff;
+                    padding:.5rem 1rem;
+                    border-radius:2rem;
+                    margin-top: 2rem;
+                }
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    }
+    &-col-item-img{
+        @include size(100%);
+        
+         object-fit: cover;
+     }
+    &-col-big{
+        width:30%;
+        height:100%;
+       
+    }
+    &-col-item-full{
+        height:100%;
+        overflow: hidden;
+    }
+ @include maxWidth(767px){
+     display:none;
+ }
+}

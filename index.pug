@@ -1,0 +1,36 @@
+block mixin 
+    include ./views/mixin
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap' rel='stylesheet')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css' integrity='sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==' crossorigin='anonymous' referrerpolicy='no-referrer')
+  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer")
+  link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
+  link(rel="stylesheet" href="./css/app.css")
+  title Document
+body
+  include ./views/modal
+  .wrapper
+    include ./views/header
+    include ./views/slider
+    include ./views/tourin
+    include ./views/favourist
+    include ./views/tourout
+    include ./views/news
+    include ./views/album
+    include ./views/why
+    include ./views/dev
+    include ./views/registration 
+    include ./views/footer 
+  script(type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js")
+  script(type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js")
+  script(type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
+  script(type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js")
+  script(type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js")
+  script(type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
+  script(src="./main.js")

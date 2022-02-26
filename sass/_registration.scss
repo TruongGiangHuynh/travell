@@ -1,0 +1,26 @@
+.registration{
+    padding: 5rem 0 5rem;
+    background: linear-gradient(to right,rgba(#000,0.5),rgba(#000,0.6)),url(https://bizweb.dktcdn.net/100/315/268/themes/681660/assets/bg_brand.png?1642398654546) top center / cover;
+    &-wrap{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &-input{
+            padding:1rem;
+            outline:none;
+            border:none;
+            font-size:1.5rem;
+            width:50%;
+            
+        }
+        &-btn{
+            padding:1rem;
+            outline:none;
+            border:none;
+            background-color: $primary-color;
+            font-size: 1.8rem;
+            font-weight:500;
+            color: #fff;
+        }
+    }
+}

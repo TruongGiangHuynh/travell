@@ -1,0 +1,21 @@
+.dev{
+    padding: 5rem 0 5rem;
+    &-list{
+        display:flex;
+        align-items:stretch;
+        justify-content: space-around;
+    }
+    @include maxWidth(767px){
+        &-list{
+            @include touchSlider(88%);
+            scroll-snap-type: none;
+            
+            justify-content:space-between;
+            scroll-snap-type: none;
+          }
+          &-item{
+              width:80%;
+              margin-left: 4rem;
+          }
+    }
+}

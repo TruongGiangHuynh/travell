@@ -1,0 +1,45 @@
+@mixin maxWidth($breakpoint) {
+    @media screen and (max-width:$breakpoint){
+        @content;
+    }
+}
+@mixin minWidth($breakpoint) {
+    @media screen and (min-width:$breakpoint){
+        @content;
+    }
+}
+@mixin textclamp($row:1,$width:100%) {
+    display: -webkit-box;
+    -webkit-line-clamp: $row;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width:$width ;
+    max-width:$width ;
+    white-space:pre-wrap;
+   word-break: break-word;
+}
+@mixin size($width,$height:$width) {
+    width: $width;
+    height: $height;
+}
+@mixin flexbox($align-item:stretch,$justify-content:flex-start,$flex-desciton:row,$flex:flex,$flex-wrap:nowrap) {
+    display:$flex;
+    align-items:$align-item;
+    justify-content:$justify-content;
+    flex-direction:$flex-desciton;
+    flex-wrap: $flex-wrap;
+
+    
+}
+@mixin touchSlider($width:80%) {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop:always; ;
+    
+    & > *{
+        flex: 0 0 $width;
+        scroll-snap-align: center;
+    }
+}
